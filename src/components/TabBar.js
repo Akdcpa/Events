@@ -266,25 +266,27 @@ class TabBar extends Component {
     return (
       <div style={{display:'flex',width:window.innerWidth}} >
           <div style={{height:window.innerHeight , overflowX:"scroll"  ,width:"30%" }} >
-            {/* <div style={{position:"fixed"}} > */}
-            
 
-            {/* </div>  */}
+              <div style={{position:"fixed",backgroundColor:"#012728" , height:40  ,marginBottom:10,width:"100%" ,top:0 ,marginBottom:30}}> 
+                  <div style={{display:"flex" , alignItems:"center" }} >
+                    <text style={{color:"white" , fontSize:16 ,fontWeight:"bolder" ,margin:10  }} >Events</text> 
+                  </div>
+              </div>
+              <div style={{marginTop:50}} >
             
-            {/* <div>
-            
-                  {
-                      events.map((val , index) =>{
-                          return(
-                              <div onClick={()=>this.onClick(val)}  >
-                                  <Box id={val.id}  keyId={this.state.id} name={val.content}   /> 
-                              </div>
-                          )
-                      })
-                  } 
-              </div> */}
+                {
+                    events.map((val , index) =>{
+                        return(
+                            <div onClick={()=>this.onClick(val)}  >
+                                <Box id={val.id}  keyId={this.state.id} name={val.content}   /> 
+                            </div>
+                        )
+                    })
+                } 
+            </div> 
             </div>
-            {/* <div style={{display:"flex" ,position:"fixed", backgroundColor:"#012728" , height:40  ,marginBottom:40}} /> */}
+
+            
           <div style={{width:"70%",position:"fixed" , right:0 , top:0 }} >
             
             <Tabs
